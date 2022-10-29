@@ -3,7 +3,7 @@
 //  weSplit
 //
 //  Created by Johel Zarco on 26/10/22.
-//
+// SIMPLE OVERVIEW OF TOPICS BEFORE BUILDING SPLITTING CHECK'S APP
 
 import SwiftUI
 
@@ -11,6 +11,10 @@ struct ContentView: View { // structs are inmutable
     // Views depend on their state usually in swiftUI, funny-weird
     @State private var tapCount = 0
     @State private var name = ""
+    @State private var selectedStudent = "Felicity"
+    
+    let students = ["Felicity", "Samantha", "Emiliy", "Daisy", "Geraldine", "Marianne"]
+    
     var body: some View {
 
         NavigationView{
@@ -31,6 +35,13 @@ struct ContentView: View { // structs are inmutable
                 Section{
                     TextField("Enter your name: ", text: $name)// $two way binding needed in here, read and write properties
                     Text("Your name is: \(name)")
+                }
+                Section{
+                    Picker("Select an student: ", selection: $selectedStudent){//
+                        ForEach(students, id: \.self){// SwiftUI needs to be able to identify each view
+                            Text($0)
+                        }
+                    }
                 }
                 
             }
