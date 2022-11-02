@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var checkAmount = 0.0
     @State private var numberOfPeople = 2
     @State private var tipPercentage = 20
+    // in order to hide keyboard or remove focus
+    @FocusState private var amountIsFocused : Bool
     
     let tipPercentages = [10, 15, 20, 25, 0]
     
@@ -32,7 +34,9 @@ struct ContentView: View {
             Form{
                 Section{
                     // if format parameter is not included there would be an error, given check amount is a double
-                    TextField("Amount", value : $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD")).keyboardType(.decimalPad)
+                    TextField("Amount", value : $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                        .keyboardType(.decimalPad)
+                        .focused($amountIsFocused)
                     // Locale.current.currencyCode ?? "USD", default is $us dollars
                     // $checkAmount has two way binding
                     Picker("Number of people", selection: $numberOfPeople){ // picker works great just
@@ -57,6 +61,16 @@ struct ContentView: View {
                     Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                 }
             }.navigationTitle("WeSplit")
+            // adds new button on top of decimal keyboard to remove focus
+                .toolbar{
+                    ToolbarItemGroup(placement : .keyboard){
+                        Spacer()// push button to the rigth corner
+                        Button("Done"){
+                            amountIsFocused = false
+                        }
+                    }
+                }
+            
         }
     }
 }
