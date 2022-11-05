@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showAlert = false
+    
     var body: some View {
         ZStack{
             // Color it's a view itself
@@ -21,7 +23,9 @@ struct ContentView: View {
             // Radial Gradient
             //RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 20, endRadius: 200)
             // ANgular gradient
-            AngularGradient(gradient: Gradient(colors: [.red, .blue, .pink]), center: .center)
+            //-------------------------------------------
+            
+//            AngularGradient(gradient: Gradient(colors: [.red, .blue, .pink]), center: .center)
             VStack {
                 HStack{
                     Image(systemName: "globe")
@@ -29,11 +33,10 @@ struct ContentView: View {
                         .foregroundColor(.blue)
                     Image(systemName: "globe")
                         .imageScale(.large)
-                        .foregroundColor(.pink)
+                        .foregroundColor(.white)
                     Image(systemName: "globe")
                         .imageScale(.large)
                         .foregroundColor(.cyan)
-
                 }
                 HStack{
                     Image(systemName: "globe")
@@ -41,11 +44,10 @@ struct ContentView: View {
                         .foregroundColor(.blue)
                     Image(systemName: "globe")
                         .imageScale(.large)
-                        .foregroundColor(.pink)
+                        .foregroundColor(.white)
                     Image(systemName: "globe")
                         .imageScale(.large)
                         .foregroundColor(.cyan)
-
                 }
                 HStack{
                     Image(systemName: "globe")
@@ -53,11 +55,51 @@ struct ContentView: View {
                         .foregroundColor(.blue)
                     Image(systemName: "globe")
                         .imageScale(.large)
-                        .foregroundColor(.pink)
+                        .foregroundColor(.white)
                     Image(systemName: "globe")
                         .imageScale(.large)
                         .foregroundColor(.cyan)
                 }
+                // BUTTONS
+                Button("Button 1"){}
+                    .buttonStyle(.bordered)
+                Button("Button 2", role: .destructive){}// destructive make it red
+                    .buttonStyle(.bordered)
+                Button("Button 3"){}
+                    .buttonStyle(.borderedProminent)
+                    .tint(.mint) // .tint() rerers to button's background color
+                Button("Button 4", role: .destructive){}
+                    .buttonStyle(.borderedProminent)
+                // custom button
+                Button{
+                    print("Custom button was tapped")
+                }label: {
+                    Text("I dare you!")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(.black)
+                }
+                // Button with system image
+                Button{
+                    print("Edit button was tapped")
+                }label: {
+                    Label("Edit", systemImage: "pencil")
+//                        .padding()
+//                        .foregroundColor(.white)
+//                        .background(.black)
+                }
+                // show alerts in swiftUI should be a funtion of @State
+                Button("Initiate sequence", role: .destructive){
+                    showAlert = true
+                }
+                .buttonStyle(.borderedProminent)
+                .alert("This is NOT a drill", isPresented: $showAlert){// $ goes back to false automatically
+                    Button("Launch", role: .destructive){}
+                    Button("Cancel", role: .cancel){}
+                } message: {
+                    Text("Seek shelter")
+                }
+                
             }
         }.ignoresSafeArea()
 //        .padding()
