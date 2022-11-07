@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9639BC132919B82E0024CF42 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BC122919B82E0024CF42 /* Overview.swift */; };
 		96855345291477E7003E33B6 /* guessTheFlagApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96855344291477E7003E33B6 /* guessTheFlagApp.swift */; };
 		96855347291477E7003E33B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96855346291477E7003E33B6 /* ContentView.swift */; };
 		96855349291477E9003E33B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96855348291477E9003E33B6 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9639BC122919B82E0024CF42 /* Overview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
 		96855341291477E7003E33B6 /* guessTheFlag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = guessTheFlag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96855344291477E7003E33B6 /* guessTheFlagApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guessTheFlagApp.swift; sourceTree = "<group>"; };
 		96855346291477E7003E33B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				96855344291477E7003E33B6 /* guessTheFlagApp.swift */,
 				96855346291477E7003E33B6 /* ContentView.swift */,
+				9639BC122919B82E0024CF42 /* Overview.swift */,
 				96855348291477E9003E33B6 /* Assets.xcassets */,
 				9685534A291477E9003E33B6 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9639BC132919B82E0024CF42 /* Overview.swift in Sources */,
 				96855347291477E7003E33B6 /* ContentView.swift in Sources */,
 				96855345291477E7003E33B6 /* guessTheFlagApp.swift in Sources */,
 			);
