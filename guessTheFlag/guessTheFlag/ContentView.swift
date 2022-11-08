@@ -18,13 +18,17 @@ struct ContentView: View {
     var body: some View {
 //        LinearGradient(stops: [Gradient.Stop(color: .pink, location: 0.45), Gradient.Stop(color: .black, location: 0.55)], startPoint: .top, endPoint: .bottom)
         ZStack{
-            Color.cyan.ignoresSafeArea()
+//            Color.cyan.ignoresSafeArea()
+            LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
             VStack(spacing : 30){
                 VStack{
                     Text("Tap the flag of:")
                         .foregroundColor(.white)
-                    Text(countries[correctAnswer])
+                        .font(.subheadline.weight(.heavy))
+                    
+                    Text(countries[correctAnswer].capitalized)
                         .foregroundColor(.white)
+                        .font(.largeTitle.weight(.semibold))
                 }
                 
                 ForEach(0..<3){ number in
@@ -34,16 +38,18 @@ struct ContentView: View {
                     } label: {
                         Image(countries[number])
                             .renderingMode(.original)
+                            .clipShape(Capsule())
+                            .shadow(radius: 5)
                     }
                 }
             }
-        }//Z
+        } //Z
         .alert(scoreTitle, isPresented: $showingScore){
             Button("Continue", action : askQuestion)
         }message: {
             Text("Your score is:\(score)")
         }
-    }//body
+    } //body
     
     func flagTapped(_ number : Int){
         if(number == correctAnswer){
@@ -57,7 +63,7 @@ struct ContentView: View {
     }
     
     func askQuestion(){
-        // will not compile unless properties are declared as @state
+        // will not compile unless properties are declared as @State
         countries.shuffled()
         correctAnswer = Int.random(in: 0...2)
     }
