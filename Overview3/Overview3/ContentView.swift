@@ -6,6 +6,20 @@
 //
 
 import SwiftUI
+
+// Custom  modifiers:
+struct titleMod : ViewModifier{
+    func body(content: Content) -> some View {
+        content.font(.largeTitle).fontWeight(.heavy).shadow(radius: 5)
+    }
+}
+// usually it's a good idea to wrap up the mod into an extension
+extension View{
+    func titleStyle() -> some View{
+        modifier(titleMod())
+    }
+}
+
 // refactor elements into separate views, DO NOT worry about perfomance!
 // easier to reuse
 struct CapsuleText: View{
@@ -49,8 +63,8 @@ struct ContentView: View {
         
         Spacer()
         VStack{
-            Text("Felicity")
-            Text("Katherine")
+            Text("Felicity").modifier(titleMod())
+            Text("Katherine").titleStyle()
             Text("Marianne").font(.largeTitle).fontWeight(.semibold) // child modifier overrides
         }.font(.title) // envoriment modifier, apply to whole group
         // Not all modifiers behave the same, use common sense and read the docs
