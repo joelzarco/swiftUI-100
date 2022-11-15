@@ -19,6 +19,7 @@ extension View{
         modifier(titleMod())
     }
 }
+// "Tip: Often folks wonder when it’s better to add a custom view modifier versus just adding a new method to View, and really it comes down to one main reason: custom view modifiers can have their own stored properties, whereas extensions to View cannot"
 
 // refactor elements into separate views, DO NOT worry about perfomance!
 // easier to reuse
