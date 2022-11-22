@@ -27,8 +27,9 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
+            
             Form{ // looks better with forms
-                
+//
                 VStack(alignment: .center, spacing: 0){
                     Text("When do you want to wake up?")
                         .font(.headline)
@@ -46,6 +47,7 @@ struct ContentView: View {
                         .font(.headline)
                     Stepper(coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups", value: $coffeeAmount, in: 1...20)
                 }
+
             } //Form
             // trailing button for result
             .navigationTitle("BetterRest")
@@ -57,7 +59,9 @@ struct ContentView: View {
             } message: {
                 Text(alertMessage)
             }
+            
         } //nav
+        
     } // someV
     
     func calculateBedTime(){
