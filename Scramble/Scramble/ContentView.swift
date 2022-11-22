@@ -8,31 +8,57 @@
 import SwiftUI
 
 struct ContentView: View {
-    let people = ["Felicity", "Samantha", "Ivonne", "Jessica", "Karla"]
+    @State private var useWords = [String]()
+    @State private var rootWord = ""
+    @State private var newWord = ""
+
     var body: some View {
-        List{ // it is possible to create ros directly in here with something like ForEach(people, id: \.self)
-            Section("Section 1"){
-                Text("Static row")
-                Text("Static row")
-            }
-            
-            Section("Section 2"){
-                ForEach(1..<4){
-                    Text("Dynamic row \($0)").font(.body)
+        NavigationView{
+            List{
+                Section{
+                    TextField("Enter your word: ", text: $newWord)
+                        .textInputAutocapitalization(.never)// by default no initial Capital letter
                 }
-            }
-            Section("Section 3"){
-                Text("Static row")
-                Text("Static row")
-            }
-            Section("Section 4"){
-                ForEach(people, id: \.self){
-                    Text("\($0)")
+                
+                Section{
+                    ForEach(useWords, id: \.self){ word in
+                        HStack{ // show word length with SF
+                            Image(systemName: "\(word.count).circle.fill")
+                            Text(word)
+                        }
+                    }
                 }
+            } //L
+            .navigationTitle(rootWord)
+            .onSubmit {
+                addNewWord()
             }
-            
-        } //List
+            .onAppear(perform: startGame)
+        } //Nav
     } // someV
+    
+    func addNewWord(){ // simple validation
+        let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        // check at least one char
+        guard answer.count > 0 else {return}
+        // more validation to come
+        withAnimation{
+            useWords.insert(answer, at: 0)
+        }
+        newWord = ""
+    }
+    
+    func startGame(){
+        if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt"){ // no dot in ext
+            if let startWords = try? String(contentsOf: startWordsURL){
+                let allWords = startWords.components(separatedBy: "\n")
+                rootWord = allWords.randomElement() ?? "something"
+                return
+            }
+        }
+        // there was a problem if we got here
+        fatalError("Could not load start.txt from bundle")
+    }
 } // V
 
 //struct ContentView_Previews: PreviewProvider {
@@ -40,3 +66,4 @@ struct ContentView: View {
 //        ContentView()
 //    }
 //}
+// first UI iteration, simple word validation

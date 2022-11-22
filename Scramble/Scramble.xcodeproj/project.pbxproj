@@ -11,6 +11,8 @@
 		9636A2B2292C326F007D71C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636A2B1292C326F007D71C1 /* ContentView.swift */; };
 		9636A2B4292C3273007D71C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9636A2B3292C3273007D71C1 /* Assets.xcassets */; };
 		9636A2B7292C3273007D71C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9636A2B6292C3273007D71C1 /* Preview Assets.xcassets */; };
+		9639F7D2292D709B0008A529 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639F7D1292D709B0008A529 /* Overview.swift */; };
+		9639F7D4292D7E4E0008A529 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9639F7D3292D7E4E0008A529 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		9636A2B1292C326F007D71C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9636A2B3292C3273007D71C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9636A2B6292C3273007D71C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9639F7D1292D709B0008A529 /* Overview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
+		9639F7D3292D7E4E0008A529 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 				9636A2AF292C326F007D71C1 /* ScrambleApp.swift */,
 				9636A2B1292C326F007D71C1 /* ContentView.swift */,
 				9636A2B3292C3273007D71C1 /* Assets.xcassets */,
+				9639F7D1292D709B0008A529 /* Overview.swift */,
+				9639F7D3292D7E4E0008A529 /* start.txt */,
 				9636A2B5292C3273007D71C1 /* Preview Content */,
 			);
 			path = Scramble;
@@ -126,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9636A2B7292C3273007D71C1 /* Preview Assets.xcassets in Resources */,
+				9639F7D4292D7E4E0008A529 /* start.txt in Resources */,
 				9636A2B4292C3273007D71C1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9639F7D2292D709B0008A529 /* Overview.swift in Sources */,
 				9636A2B2292C326F007D71C1 /* ContentView.swift in Sources */,
 				9636A2B0292C326F007D71C1 /* ScrambleApp.swift in Sources */,
 			);
