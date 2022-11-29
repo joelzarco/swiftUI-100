@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var amount = 1.0
     @State private var StepAnimation = 1.0
     
+    @State private var rotationAmount = 0.0
+    
     var body: some View {
         VStack {
             Spacer()
@@ -63,12 +65,22 @@ struct ContentView: View {
             Spacer()
             Button("Step"){
                 StepAnimation += 0.2
-            }.padding(50)
+            }.padding(40)
                 .background(.cyan)
                 .foregroundColor(.white)
                 .clipShape(Circle())
                 .scaleEffect(StepAnimation)
             Spacer()
+            // Explicit animation
+            Button("Hello K"){
+                withAnimation(.interpolatingSpring(stiffness: 5, damping: 1)) {
+                    rotationAmount += 360
+                }
+            }.padding(30)
+                .background(.purple)
+                .foregroundColor(.white)
+                .clipShape(Circle())
+                .rotation3DEffect(.degrees(rotationAmount), axis: (x : 0, y : 1, z :0)) // full spin around y axis
         }
         .padding()
     }
