@@ -11,7 +11,7 @@ import SwiftUI
 struct Aminations_OverviewApp: App {
     var body: some Scene {
         WindowGroup {
-            Overview2()
+            Overview3()
         }
     }
 }
