@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Overview3: View {
     @State private var dragAmount = CGSize.zero
-    
+    // for second animation
     let letters = Array("Hello K!")
     @State private var enable = false
     @State private var drag = CGSize.zero
@@ -32,7 +32,7 @@ struct Overview3: View {
                 )
     //            .animation(.spring(), value: dragAmount) // smooth's drag and release
             Spacer()
-            
+            // really cool animation with little code!
             HStack(spacing : 0){
                 ForEach(0..<letters.count){ num in
                    Text(String(letters[num]))
@@ -57,9 +57,8 @@ struct Overview3: View {
             )
             Spacer()
         } // VS
-
-    }
-}
+    } // someV
+} // V
 
 //struct Overview3_Previews: PreviewProvider {
 //    static var previews: some View {
