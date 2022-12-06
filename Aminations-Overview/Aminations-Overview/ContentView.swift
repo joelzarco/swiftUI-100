@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var animationAmount = 1.0
     @State private var amount = 1.0
     @State private var StepAnimation = 1.0
-    
+
     @State private var rotationAmount = 0.0
     
     var body: some View {
