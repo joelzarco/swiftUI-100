@@ -18,7 +18,7 @@ class User : ObservableObject{
 
 struct Overview : View{
     // @StateObject must be non-private and conform to ObservableObject protocol
-    @StateObject var user = User()
+    @StateObject var user = User() // when user() is created we use @StateObeject; when read or modified elsewhere use @ObservedObject
     // @State capture every mod on User Struct and changes whole view(mustbe declared as var)
     // if user is declared as class @State property wrapper no longer works :( it's designed for local changes
     //

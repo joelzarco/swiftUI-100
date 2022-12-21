@@ -12,6 +12,8 @@
 		96A46D01293EA9D800D8ED29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A46D00293EA9D800D8ED29 /* Assets.xcassets */; };
 		96A46D04293EA9D800D8ED29 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A46D03293EA9D800D8ED29 /* Preview Assets.xcassets */; };
 		96A46D0B293EC03600D8ED29 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A46D0A293EC03600D8ED29 /* Overview.swift */; };
+		96C02B70295337120099E12A /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C02B6F295337120099E12A /* SecondView.swift */; };
+		96C02B72295339180099E12A /* NumbersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C02B71295339180099E12A /* NumbersList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		96A46D00293EA9D800D8ED29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96A46D03293EA9D800D8ED29 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		96A46D0A293EC03600D8ED29 /* Overview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
+		96C02B6F295337120099E12A /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		96C02B71295339180099E12A /* NumbersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 				96A46CFC293EA9D600D8ED29 /* iExpenseApp.swift */,
 				96A46CFE293EA9D600D8ED29 /* ContentView.swift */,
 				96A46D0A293EC03600D8ED29 /* Overview.swift */,
+				96C02B6F295337120099E12A /* SecondView.swift */,
+				96C02B71295339180099E12A /* NumbersList.swift */,
 				96A46D00293EA9D800D8ED29 /* Assets.xcassets */,
 				96A46D02293EA9D800D8ED29 /* Preview Content */,
 			);
@@ -142,6 +148,8 @@
 			files = (
 				96A46D0B293EC03600D8ED29 /* Overview.swift in Sources */,
 				96A46CFF293EA9D600D8ED29 /* ContentView.swift in Sources */,
+				96C02B72295339180099E12A /* NumbersList.swift in Sources */,
+				96C02B70295337120099E12A /* SecondView.swift in Sources */,
 				96A46CFD293EA9D600D8ED29 /* iExpenseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

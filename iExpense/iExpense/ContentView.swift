@@ -7,15 +7,24 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    @State private var showingSheet = false
+    @State private var showList = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        Button("Show sheet"){
+            showingSheet.toggle()
         }
-        .padding()
+        .sheet(isPresented: $showingSheet) {
+            // like popView or .presentIn UIKit
+            SecondView(name: "Samantha")
+        }
+        // ListView
+        Button("Show List"){
+            showList.toggle()
+        }.sheet(isPresented: $showList) {
+            NumbersList()
+        }
     }
 }
 
