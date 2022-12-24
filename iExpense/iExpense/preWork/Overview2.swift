@@ -16,7 +16,7 @@ class User : ObservableObject{
     @Published var lastName = "Baggins"
 }
 
-struct Overview : View{
+struct Overview2 : View{
     // @StateObject must be non-private and conform to ObservableObject protocol
     @StateObject var user = User() // when user() is created we use @StateObeject; when read or modified elsewhere use @ObservedObject
     // @State capture every mod on User Struct and changes whole view(mustbe declared as var)
