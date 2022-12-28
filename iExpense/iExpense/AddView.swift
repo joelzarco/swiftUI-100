@@ -11,6 +11,7 @@ struct AddView: View {
     @State private var name = ""
     @State private var type = "Personal"
     @State private var amount = 0.0
+    @State private var amountString = ""
     
     @Environment(\.dismiss) var dismissAddView
     
@@ -29,15 +30,16 @@ struct AddView: View {
                         Text($0)
                     }
                 }
-                
-                TextField("Amount", value: $amount, format : .currency(code: "USD"))
+                // simplyfied to remove 0.00 placeholder
+                TextField("Amount", text: $amountString)
                     .keyboardType(.decimalPad)
+                    
                 
             } // Form
             .navigationTitle("Add new expense")
             .toolbar {
                 Button("Save"){
-                    let item = ExpenseItem(name: name, type: type, amount: amount)
+                    let item = ExpenseItem(name: name, type: type, amount: Double(amountString) ?? 0.0)
                     expenses.items.append(item)
                     dismissAddView()
                 }
