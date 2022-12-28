@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96C7BD0F295C7C620023FF99 /* Overview3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7BD0E295C7C620023FF99 /* Overview3.swift */; };
+		96C7BD11295C81380023FF99 /* AdaptiveGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7BD10295C81380023FF99 /* AdaptiveGrid.swift */; };
 		96E07671295B3E1200D06479 /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E07670295B3E1200D06479 /* MoonshotApp.swift */; };
 		96E07673295B3E1200D06479 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E07672295B3E1200D06479 /* ContentView.swift */; };
 		96E07675295B3E1400D06479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96E07674295B3E1400D06479 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96C7BD0E295C7C620023FF99 /* Overview3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview3.swift; sourceTree = "<group>"; };
+		96C7BD10295C81380023FF99 /* AdaptiveGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveGrid.swift; sourceTree = "<group>"; };
 		96E0766D295B3E1200D06479 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E07670295B3E1200D06479 /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		96E07672295B3E1200D06479 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +42,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96C7BD12295C85CF0023FF99 /* preWork */ = {
+			isa = PBXGroup;
+			children = (
+				96E0767E295BB5B600D06479 /* Overview.swift */,
+				96E07680295BC82500D06479 /* Overview2.swift */,
+				96C7BD0E295C7C620023FF99 /* Overview3.swift */,
+				96E07682295BC9A800D06479 /* DetailViewExam.swift */,
+				96C7BD10295C81380023FF99 /* AdaptiveGrid.swift */,
+			);
+			path = preWork;
+			sourceTree = "<group>";
+		};
 		96E07664295B3E1200D06479 = {
 			isa = PBXGroup;
 			children = (
@@ -59,9 +75,7 @@
 			children = (
 				96E07670295B3E1200D06479 /* MoonshotApp.swift */,
 				96E07672295B3E1200D06479 /* ContentView.swift */,
-				96E0767E295BB5B600D06479 /* Overview.swift */,
-				96E07680295BC82500D06479 /* Overview2.swift */,
-				96E07682295BC9A800D06479 /* DetailViewExam.swift */,
+				96C7BD12295C85CF0023FF99 /* preWork */,
 				96E07674295B3E1400D06479 /* Assets.xcassets */,
 				96E07676295B3E1400D06479 /* Preview Content */,
 			);
@@ -148,6 +162,8 @@
 			files = (
 				96E0767F295BB5B600D06479 /* Overview.swift in Sources */,
 				96E07673295B3E1200D06479 /* ContentView.swift in Sources */,
+				96C7BD11295C81380023FF99 /* AdaptiveGrid.swift in Sources */,
+				96C7BD0F295C7C620023FF99 /* Overview3.swift in Sources */,
 				96E07671295B3E1200D06479 /* MoonshotApp.swift in Sources */,
 				96E07681295BC82500D06479 /* Overview2.swift in Sources */,
 				96E07683295BC9A800D06479 /* DetailViewExam.swift in Sources */,
