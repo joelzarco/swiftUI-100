@@ -11,11 +11,11 @@ import SwiftUI
 struct MoonshotApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
+            ContentView()
 //            Overview()
 //            Overview2()
 //            Overview3()
-            AdaptiveGrid()
+//            AdaptiveGrid()
         }
     }
 }
