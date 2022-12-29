@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9602B959295DD83800F64290 /* Color-theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9602B958295DD83800F64290 /* Color-theme.swift */; };
 		96C7BD0F295C7C620023FF99 /* Overview3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7BD0E295C7C620023FF99 /* Overview3.swift */; };
 		96C7BD11295C81380023FF99 /* AdaptiveGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7BD10295C81380023FF99 /* AdaptiveGrid.swift */; };
 		96C7BD14295C88280023FF99 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 96C7BD13295C88280023FF99 /* astronauts.json */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9602B958295DD83800F64290 /* Color-theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-theme.swift"; sourceTree = "<group>"; };
 		96C7BD0E295C7C620023FF99 /* Overview3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview3.swift; sourceTree = "<group>"; };
 		96C7BD10295C81380023FF99 /* AdaptiveGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveGrid.swift; sourceTree = "<group>"; };
 		96C7BD13295C88280023FF99 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				96C7BD17295C897C0023FF99 /* Astronaut.swift */,
 				96C7BD19295C8A3C0023FF99 /* Bundle-decodable.swift */,
 				96C7BD1B295D0C2C0023FF99 /* Mission.swift */,
+				9602B958295DD83800F64290 /* Color-theme.swift */,
 				96C7BD13295C88280023FF99 /* astronauts.json */,
 				96C7BD15295C88410023FF99 /* missions.json */,
 				96C7BD12295C85CF0023FF99 /* preWork */,
@@ -185,6 +188,7 @@
 				96C7BD1A295C8A3C0023FF99 /* Bundle-decodable.swift in Sources */,
 				96E07671295B3E1200D06479 /* MoonshotApp.swift in Sources */,
 				96E07681295BC82500D06479 /* Overview2.swift in Sources */,
+				9602B959295DD83800F64290 /* Color-theme.swift in Sources */,
 				96C7BD1C295D0C2C0023FF99 /* Mission.swift in Sources */,
 				96E07683295BC9A800D06479 /* DetailViewExam.swift in Sources */,
 			);
