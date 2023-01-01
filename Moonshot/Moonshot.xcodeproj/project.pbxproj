@@ -91,11 +91,11 @@
 			children = (
 				96E07670295B3E1200D06479 /* MoonshotApp.swift */,
 				96E07672295B3E1200D06479 /* ContentView.swift */,
-				96C7BD17295C897C0023FF99 /* Astronaut.swift */,
 				9602B95A295E48E800F64290 /* MissionView.swift */,
 				96A21BF9295F9453001DA81E /* AstronautView.swift */,
 				96C7BD19295C8A3C0023FF99 /* Bundle-decodable.swift */,
 				96C7BD1B295D0C2C0023FF99 /* Mission.swift */,
+				96C7BD17295C897C0023FF99 /* Astronaut.swift */,
 				9602B958295DD83800F64290 /* Color-theme.swift */,
 				96C7BD13295C88280023FF99 /* astronauts.json */,
 				96C7BD15295C88410023FF99 /* missions.json */,
